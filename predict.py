@@ -33,11 +33,11 @@ from tensorflow.keras import datasets, layers, models
 # Resize images to fit into our input layer if needed
 size = 256, 256
 
-path = "rosana"
+path = "test"
 num = 0
 
 """
-for item in os.listdir("rosana"):
+for item in os.listdir(path):
     file = os.path.join(path, item)
     im = Image.open(file)
     im = im.resize(size)
@@ -49,7 +49,7 @@ for item in os.listdir("rosana"):
 # Loads our model and does a prediction for everyfile inside our folder
 model = models.load_model("model.h5")
 
-for item in os.listdir("rosana"):
+for item in os.listdir("test"):
     img = tf.keras.preprocessing.image.load_img(os.path.join(path, item))
 
     img = tf.keras.preprocessing.image.img_to_array(img)
