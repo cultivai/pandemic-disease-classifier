@@ -30,6 +30,7 @@ from tensorflow.keras import datasets, layers, models
 
 ############################
 
+# Resize images to fit into our input layer if needed
 size = 256, 256
 
 path = "rosana"
@@ -45,7 +46,7 @@ for item in os.listdir("rosana"):
     os.remove(file)
 """
 
-
+# Loads our model and does a prediction for everyfile inside our folder
 model = models.load_model("model.h5")
 
 for item in os.listdir("rosana"):

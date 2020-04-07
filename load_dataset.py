@@ -34,6 +34,8 @@ list_ds = tf.data.Dataset.list_files(str(data_dir / "*/*"))
 
 image_count = len(list(data_dir.glob("*/*.jpg")))
 
+# Our dataset folder should contain subfolders with the final classes that we want,
+# such as "good" and "bad". Those classes will be saved under CLASS_NAMES
 CLASS_NAMES = np.array([item.name for item in data_dir.glob("*")])
 BATCH_SIZE = 32
 IMG_HEIGHT = 256
