@@ -1,5 +1,6 @@
 dataset/
 *.h5
+*.onnx
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
