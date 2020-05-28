@@ -105,7 +105,7 @@ print("Took ", time.time() - start, " seconds")
 plt.figure()
 for i in range(len(imgs)):
     plt.imshow(imgs[i], cmap=plt.cm.binary)
-    label = "Good" if results[i] > 0.2 else ("Bad" if results[i] < -0.2 else "Not sure")
+    label = "Good" if results[i] > 0.7 else ("Bad" if results[i] < 0.5 else "Not sure")
     if (label == "Good"):
         array_pred.append(1)
     else:
